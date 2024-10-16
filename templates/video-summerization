@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 900px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .video-upload {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .upload-box {
+            border: 2px dashed #ccc;
+            padding: 40px;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+        .upload-box:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Video Summarization</h1>
+            <p>Upload your video to generate a concise summary with key highlights.</p>
+        </div>
+
+        <!-- Upload Video Section -->
+        <div class="video-upload">
+            <form action="/summarize-video" method="post" enctype="multipart/form-data">
+                <div class="upload-box">
+                    <input type="file" name="video" required style="display: none;" id="file-input">
+                    <label for="file-input" class="btn btn-outline-primary">Click to upload or drag and drop</label>
+                    <p>Supported formats: MP4, AVI, MOV (MAX. 800MB)</p>
+                </div>
+                <button type="submit" class="btn btn-primary">Summarize Video</button>
+            </form>
+        </div>
+
+        <div class="summary-info">
+            <h3>What is Video Summarization?</h3>
+            <p>Video summarization automatically creates a concise summary of a video by identifying keyframes or segments that represent the most informative content. This is particularly useful for surveillance footage, long presentations, or event recordings.</p>
+
+            <h3>Benefits of Video Summarization</h3>
+            <ul>
+                <li>Saves time by providing key highlights</li>
+                <li>Reduces storage space requirements</li>
+                <li>Enhances content navigation for users</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
