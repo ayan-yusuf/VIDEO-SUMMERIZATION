@@ -65,8 +65,21 @@ def summarize_video(input_video_path):
 def index():
     return render_template('index.html')
 
+@app.route('/videosumm.html')
+def video_summarization():
+    return render_template('videosumm.html')  # Route for Video Summarization
+
+@app.route('/object.html')
+def object_detection():
+    return render_template('object.html')  # Route for Object Detection
+
+@app.route('/videoskimm.html')
+def video_skimming():
+    return render_template('videoskimm.html')  # Route for Video Skimming
+
 @app.route('/upload', methods=['POST'])
 def upload_video():
+    
     if 'video' not in request.files:
         return "No video uploaded", 400
 
