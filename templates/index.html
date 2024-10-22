@@ -43,13 +43,11 @@
             height: 65vh; 
             border-radius: 50px;
             transition: background-color 0.3s;
-            display: flex; /* Use Flexbox */
-            flex-direction: column; /* Stack content vertically */
-            justify-content: center; /* Center content vertically */
-            align-items: center; /* Center content horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        
-        
         .upload-box:hover {
             background-color: #f0f0f0;
         }
@@ -61,7 +59,7 @@
             font-weight: bold;
             margin-bottom: 20px;
             color: #000000;
-            font-size: 2rem; /* Increased size */
+            font-size: 2rem;
         }
         .features-item {
             background-color: #ffffff;
@@ -74,19 +72,19 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex; /* Flexbox to center content */
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center; /* Center vertically */
-            align-items: center; /* Center horizontally */
-            text-align: center; /* Center text */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         .features-item h5 {
-            font-size: 2.5rem; /* Increased size */
-            margin-bottom: 10px; /* Space between heading and text */
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
         .features-item p {
-            font-size: 1.2rem; /* Increased size */
-            margin-top: 10px; /* Space above paragraph */
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
         .features-item:hover {
             transform: translateY(-10px);
@@ -99,6 +97,11 @@
             text-align: center;
             margin-top: auto;
             width: 150%;
+        }
+        .btn-feature {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            padding: 10px 20px;
         }
         @media (max-width: 768px) {
             .upload-box {
@@ -132,24 +135,28 @@
             </form>
         </div>
 
-
-        
         <!-- Features Section -->
         <div class="features">
             <h1>Our Features</h1>
             <h1>.</h1>
             <div class="row">
-                <div class="col-md-12 features-item" onclick="window.location.href='https://example.com/video-summarization'">
+                <!-- Video Summarization Feature -->
+                <div class="col-md-12 features-item">
                     <h5>🎥 Video Summarization</h5>
                     <p>Extract key moments and create concise summaries of long videos.</p>
+                    <a href="videosumm.html" class="btn btn-dark btn-feature">Go to Video Summarization</a>
                 </div>
-                <div class="col-md-12 features-item" onclick="window.location.href='https://example.com/object-detection'">
+                <!-- Object Detection Feature -->
+                <div class="col-md-12 features-item">
                     <h5>🔍 Object Detection</h5>
                     <p>Identify and track objects throughout your videos with precision.</p>
+                    <a href="object.html" class="btn btn-dark btn-feature">Go to Object Detection</a>
                 </div>
-                <div class="col-md-12 features-item" onclick="window.location.href='https://example.com/video-skimming'">
+                <!-- Video Skimming Feature -->
+                <div class="col-md-12 features-item">
                     <h5>⚡ Video Skimming</h5>
                     <p>Quickly navigate through video content with intelligent skimming technology.</p>
+                    <a href="videoskimm.html" class="btn btn-dark btn-feature">Go to Video Skimming</a>
                 </div>
             </div>
         </div>
